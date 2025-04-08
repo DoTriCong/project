@@ -1,0 +1,77 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.dashboard-header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard-header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.category-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.add-category {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Bảng */
+.category-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.category-table th, .category-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  margin-top: auto; /* Đẩy footer xuống dưới */
+  text-align: center;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css" />
+  </head>
+  <body>
+    <div class="register-container">
+      <div class="register-left">
+        <h1>Welcome to the website</h1>
+        <p>RIKEI EDUCATION</p>
+        <img class="icon-1" src="../assets/icons/Gradient.png" alt="" />
+        <img class="icon-2" src="../assets/icons/Gradient (1).png" alt="" />
+      </div>
+      <div class="register-right">
+        <form class="register-form">
+          <div class="input-group">
+            <div class="input-field">
+              <input type="text" id="first-name" required />
+              <label for="first-name">First Name</label>
+            </div>
+            <div class="input-field">
+              <input type="text" id="last-name" required />
+              <label for="last-name">Last Name</label>
+            </div>
+          </div>
+          <div class="input-field">
+            <input type="email" id="email" required />
+            <label for="email">Email address</label>
+          </div>
+          <div class="input-field">
+            <input type="password" id="password" required />
+            <label for="password">Password</label>
+          </div>
+          <div class="input-field">
+            <input type="password" id="confirm-password" required />
+            <label for="confirm-password">Confirm Password</label>
+          </div>
+          <button type="submit">Sign up</button>
+          <p class="register-1">
+            <b>Already have an account?</b>
+            <a class="login" href="#"
+              ><b><a href="./login.html">login</a></b></a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="../js/register.js"></script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #f8f9fb;
+}
+
+.admin-dashboard {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f0f4ff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0044cc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar button:hover {
+  background: #d9e2ff;
+}
+
+.sidebar button img {
+  width: 24px;
+  height: 24px;
+}
+
+.logout {
+  background: #ffe5e5;
+  color: red;
+}
+
+.logout:hover {
+  background: #ffcccc;
+}
+
+/* Nội dung chính */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.topbar input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.user-icons img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+/* Bảng quản lý user */
+.manage-users {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.user-list th, .user-list td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-list th {
+  background: #f0f4ff;
+}
+
+.user-list img{
+  width: 24px;
+height: 16px;
+
+}
+
+.user-list a {
+  color: blue;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pagination .page-numbers {
+  display: flex;
+  gap: 8px;
+  margin: 0 10px;
+}
+
+.pagination .page-numbers span {
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination .page-numbers .active {
+  background: #d9e2ff;
+  font-weight: bold;
+  color: #0044cc;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  background: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
