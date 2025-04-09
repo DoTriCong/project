@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background-color: white;
+  }
+  .admin-dashboard {
+      display: flex;
+      width: 100%;
+  }
+  .sidebar {
+      width: 200px;
+      padding: 10px;
+    }
+    
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+    .sidebar button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #cce5ff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #007bff;
+      cursor: pointer;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .sidebar button:hover {
+      background-color: #b3daff;
+      box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.3);
+    }
+    
+    .sidebar button img {
+      width: 20px;
+      height: 20px;
+      background-color: #ff6600;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    
+    .logout {
+      background-color: #d9eaf7;
+    }
+    
+    .logout:hover {
+      background-color: #c2d8f0;
+    }
+  
+  .logout {
+      color: red;
+  }
+  .content {
+      flex-grow: 1;
+      padding: 20px;
+  }
+  .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  .topbar input {
+      width: 60%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+  .manage-categories {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 60%;
+  }
+  .manage-categories h2 {
+      font-size: 24px;
+      font-weight: bold;
+  }
+  .manage-categories h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+  }
+  .category-form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+  }
+  .category-form input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+  .add-category {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px 50px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      width: 966px;
+  }
+  
+  footer {
+      position: absolute;
+      bottom: 0;
+      width: 80%;
+      background: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .category-list {
+      width: 100%;
+      margin: 0 auto;
+      padding: 15px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+  
+  .category-list h3 {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  
+  .category-list th, .category-list td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+  }
+  
+  .user-icons img{
+      width: 30px;
+      height: 30px;
+  }
+  
+  th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    
+    th {
+      background: #f8f8f8;
+      font-weight: bold;
+    }
+    
+    .edit-btn {
+      background-color: #4CAF50;
+      color: white; 
+      border: none; 
+      padding: 10px 20px; 
+      border-radius: 5px; 
+      cursor: pointer; 
+    }
+  
+    .edit-btn:hover {
+      background-color: #45a049; 
+    }
+  
+    .delete-btn {
+      background-color: #f44336; 
+      color: white;
+      border: none; 
+      padding: 10px 20px; 
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+    }
+    
+    .pagination button {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .pagination .page-numbers {
+      display: flex;
+      gap: 8px;
+      margin: 0 10px;
+    }
+    
+    .pagination .page-numbers span {
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .pagination .page-numbers .active {
+      background: #ececff;
+      font-weight: bold;
+      color: #4a4af4;
+    }

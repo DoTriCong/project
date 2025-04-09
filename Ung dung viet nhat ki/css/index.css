@@ -1,0 +1,481 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    max-width: 95%;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 97vw;
+}
+.logo {
+    width: 194px;
+    height: 24px;
+    top: 24px;
+    left: 24px;    
+}
+
+.header .search-container {
+    position: relative;
+    width: 55%; 
+}
+
+.header .search-bar {
+    width: 100%; 
+    padding: 10px 40px 10px 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.header .search-icon {
+    position: absolute; 
+    right: -40px;
+    top: 50%; 
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    pointer-events: none; 
+}
+
+
+.header .action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+.header .action-buttons .sign-up {
+    border: 1px solid rgb(240, 236, 236);
+    padding: 5px 15px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.header .action-buttons .sign-in {
+    border: 1px solid rgb(240, 236, 236);
+    padding: 5px 15px;
+    background-color: white;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.header .action-buttons .sign-in a{
+    text-decoration: none;
+    color: black;
+}
+
+.header .action-buttons .sign-up a{
+    text-decoration: none;
+    color: black;
+}
+
+.header .action-buttons .sign-up:hover {
+    background-color: #0056b3;
+}
+
+.header .action-buttons .sign-in:hover {
+    background-color: #45a049;
+}
+
+.recent-posts {
+    width: 80%;
+    margin: 40px auto;
+}
+  
+.recent-posts h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+  .section-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #000; 
+  }
+  
+  .post {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.post-large {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    grid-row: span 2; 
+}
+
+.post-large img {
+    width: 592px;
+    height: 268px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.post-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px;
+    align-items: start;
+}
+
+.post img {
+    width: 592px;
+    height: 268px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.post-small {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    width: 750px;
+    margin-right: 0px;
+}
+
+.post-small img {
+    width: 320px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-content h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+.daily-journal {
+    color: purple;
+}
+
+.work-career {
+    color: blue;
+}
+
+.personal-thoughts {
+    color: green;
+}
+
+  .post-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .post-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+
+  .post-content .date {
+    color: #6941C6;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0%;
+}
+  .post-container .iconText{
+    width: 130px;
+    height: 24px;
+    mix-blend-mode: Multiply; 
+  }
+
+  .post-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #667085; 
+    margin-bottom: 10px;
+  }
+  
+
+  .badge {
+    background-color: #f9f5ff; 
+    border-radius: 16px;
+  }
+  
+  .badge img {
+    width: 107px;
+    height: 24px;
+  }
+  
+
+/* Add New Article Section */
+.add-new-article {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    width: 100%;    
+}
+
+.add-new-article h2 {
+    display: flex;
+    font-size: 24px;
+    color: #ff4d4d;
+    margin-left: 800px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    font-size: 37px;
+    line-height: 32px;
+}
+
+.add-new-article .plus {
+    width: 24px;
+    height: 24px;
+}
+
+.categories {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.categories li {
+    padding: 5px 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+   margin-left: 210px;
+
+}
+
+.blog-container .iconText{
+    width: 135px;
+    height: 24px;
+}
+
+.blog-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.blog-card img {
+    width: 384px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.blog-card .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.date {
+    font-size: 14px;
+    color: #6941C6;
+    font-weight: 600;
+}
+
+h2 {
+    width: 384px;
+   height: 32px;
+    gap: 16px;
+
+}
+
+p {
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0%;
+color: #667085;
+
+}
+
+.category {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12px;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.pagination span {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.pagination .active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.post-info h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-socials {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.footer-icons {
+    text-align: center;
+    padding-top: 20px;
+  }
+  .footer-icons img {
+    margin: 0 10px;
+    width: 16.689332962036133px;
+   height: 17.444555282592773px;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .search-container {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .post-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .post-small {
+      width: 100%;
+      max-width: 400px;
+    }
+    .add-new-article h2 {
+        width: 90%; 
+        text-align: center;
+        margin: auto;
+        padding: 10px;
+      }
+  }
+  
+ 

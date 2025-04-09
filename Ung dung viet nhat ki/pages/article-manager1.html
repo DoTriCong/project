@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/article-manager1.css" />
+  </head>
+  <body>
+    <section class="article-details">
+      <div class="post">
+        <img src="../assets/icons/Back.png" alt="" />
+        <div class="post-header">
+          <img src="../assets/images/Avatar.png" alt="User Avatar" />
+          <div class="post-info">
+            <h3>A Productive Day at Work</h3>
+            <p class="summary">
+              Today was a really productive day at work. I managed to finish a
+              report ahead of schedule and received positive feedback from my
+              manager.
+            </p>
+            <p class="stats">Likes: 15 💓 Replies: 6 🗯</p>
+          </div>
+        </div>
+      </div>
+      <div class="comments-section">
+        <h4>Comments</h4>
+        <!-- Khu vực hiển thị bình luận -->
+        <div id="comments-container">
+          <!-- Các bình luận sẽ được render tại đây -->
+        </div>
+
+        <!-- Form viết bình luận mới -->
+        <form id="comment-form">
+          <input
+            type="text"
+            id="comment-text"
+            placeholder="Viết bình luận của bạn tại đây..."
+            required
+          />
+          <button type="submit">Bình luận</button>
+        </form>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const articleData = JSON.parse(localStorage.getItem("selectedArticle"));
+
+        if (articleData) {
+          // Hiển thị thông tin bài viết
+          document.querySelector(".post-info h3").innerText = articleData.title;
+          document.querySelector(".post-info .summary").innerText =
+            articleData.content;
+          document.querySelector(".post img").src = articleData.image;
+
+          // Hiển thị bình luận hiện tại
+          const commentsContainer =
+            document.getElementById("comments-container");
+          commentsContainer.innerHTML = ""; // Xóa nội dung cũ
+          if (articleData.comments && articleData.comments.length > 0) {
+            articleData.comments.forEach((comment) => {
+              const commentElement = document.createElement("div");
+              commentElement.classList.add("comment");
+              commentElement.innerHTML = `
+          <p><img src="${comment.avatar}" alt="Avatar" /> ${comment.text}</p>
+          <p class="stats">Likes: ${comment.likes} 💓 Replies: ${comment.replies} 🗯</p>
+        `;
+              commentsContainer.appendChild(commentElement);
+            });
+          } else {
+            commentsContainer.innerHTML = `<p>Không có bình luận nào.</p>`;
+          }
+        }
+
+        // Xử lý form gửi bình luận mới
+        const commentForm = document.getElementById("comment-form");
+        commentForm.addEventListener("submit", (e) => {
+          e.preventDefault(); // Ngăn reload trang
+
+          // Lấy nội dung bình luận mới
+          const commentText = document
+            .getElementById("comment-text")
+            .value.trim();
+          if (!commentText) return;
+
+          // Tạo bình luận mới
+          const newComment = {
+            avatar: "../assets/images/default-avatar.png", // Avatar mặc định
+            text: commentText,
+            likes: 0,
+            replies: 0,
+          };
+
+          // Cập nhật danh sách bình luận
+          if (!articleData.comments) {
+            articleData.comments = [];
+          }
+          articleData.comments.push(newComment); // Thêm vào mảng comments
+          localStorage.setItem("selectedArticle", JSON.stringify(articleData)); // Cập nhật localStorage
+
+          // Hiển thị bình luận mới ngay trên giao diện
+          const commentElement = document.createElement("div");
+          commentElement.classList.add("comment");
+          commentElement.innerHTML = `
+      <p><img src="${newComment.avatar}" alt="Avatar" /> ${newComment.text}</p>
+      <p class="stats">Likes: ${newComment.likes} 💓 Replies: ${newComment.replies} 🗯</p>
+    `;
+          commentsContainer.appendChild(commentElement); // Thêm vào giao diện
+
+          // Reset ô nhập liệu
+          document.getElementById("comment-text").value = "";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.article-container {
+    width: 60%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+select#mood {
+    width: 200px;
+    height: 100px; /* Tăng chiều cao để thấy tất cả các lựa chọn */
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  option {
+    padding: 5px;
+  }  
+
+.article-container h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[disabled] {
+    background-color: #eee;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+.status-options {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+.status-options input {
+    margin: 0; 
+}
+
+.status-options label {
+    margin-right: 5px; 
+}
+
+
+.add-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+.file-upload {
+    margin: 20px 0;
+  }
+  
+  .upload-box {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: #444;
+    font-size: 14px;
+    display: inline-block;
+    width: 300px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .upload-box:hover {
+    border-color: #888;
+  }
+  
+  .upload-box img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+  }
+  
+
+@media (max-width: 768px) {
+    .article-container {
+        width: 90%;
+    }
+
+    .status {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .status-options {
+        gap: 5px;
+    }
+}

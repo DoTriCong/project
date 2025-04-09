@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Categories</title>
+    <link rel="stylesheet" href="../css/entries_manager.css" />
+  </head>
+  <body>
+    <div class="admin-dashboard">
+      <aside class="sidebar">
+        <ul>
+          <li>
+            <button>
+              <img
+                src="../assets/icons/project_frontend_01/User/Users_Group.svg"
+                alt=""
+              />Manage Users
+            </button>
+          </li>
+          <li>
+            <button>
+              <img
+                src="../assets/icons/project_frontend_01 (1)/Interface/Book.svg"
+                alt=""
+              />
+              Manage Entries
+            </button>
+          </li>
+          <li>
+            <button>
+              <img
+                src="../assets/icons/project_frontend_01 (2)/Interface/Book_Open.svg"
+                alt=""
+              />Manage Articles
+            </button>
+          </li>
+          <li>
+            <button class="logout">
+              <img
+                src="../assets/icons/project_frontend_01 (3)/Interface/Log_Out.svg"
+                alt=""
+              />Log out
+            </button>
+          </li>
+        </ul>
+      </aside>
+      <main class="content">
+        <header class="topbar">
+          <input type="text" placeholder="Search Article Categories" />
+          <div class="user-icons">
+            <img src="../assets/icons/Mail.png" alt="" />
+            <img src="../assets/icons/Bell.png" alt="" />
+            <img src="../assets/images/Avatar (1).png" alt="" />
+          </div>
+        </header>
+        <section class="manage-categories">
+          <h2>📂 Manage Categories</h2>
+          <label for="Category Name:">Category Name:</label>
+          <div class="category-form">
+            <input type="text" placeholder="Enter category name" />
+          </div>
+          <button class="add-category">Add Category</button>
+          <h3>📋 Category List</h3>
+          <table class="category-list">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Category Name</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <footer>
+            <div class="pagination">
+              <button class="prev-btn">← Previous</button>
+              <span class="page-numbers">
+                <span class="active">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>...</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+              </span>
+              <button class="next-btn">Next →</button>
+            </div>
+          </footer>
+        </section>
+      </main>
+    </div>
+    <script src="../js/entries_manager.js"></script>
+  </body>
+</html>

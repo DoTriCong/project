@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+  </head>
+  <body>
+    <!-- Header điều hướng -->
+    <header class="dashboard-header">
+      <div class="header-container">
+        <h1>📝 Quản trị hệ thống</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="dashboard.html">Tổng quan</a></li>
+            <li><a href="article-manager2.html">Quản lý bài viết</a></li>
+            <li><a href="entries_manager.html">Quản lý danh mục</a></li>
+            <li><a href="user_manager.html">Quản lý người dùng</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Nội dung dashboard -->
+    <div class="dashboard-container">
+      <h2>📊 Dashboard</h2>
+
+      <div class="stats-cards">
+        <div class="card total">
+          <h3>Tổng bài viết</h3>
+          <p id="total-posts">12</p>
+        </div>
+        <div class="card public">
+          <h3>Bài viết công khai</h3>
+          <p id="public-posts">7</p>
+        </div>
+        <div class="card private">
+          <h3>Bài viết riêng tư</h3>
+          <p id="private-posts">5</p>
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <button onclick="window.location.href='article-manager2.html'">
+          📄 Quản lý bài viết
+        </button>
+        <button onclick="window.location.href='article_manager.html'">
+          ➕ Thêm bài viết
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
